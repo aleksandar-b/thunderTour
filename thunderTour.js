@@ -1,4 +1,3 @@
- 
 /*Tour JS library*/
 
 var Tour =  (function(){
@@ -115,10 +114,10 @@ var triangle = '<div class="triangle'+side+'"></div>';
      
      
 
-   var ht = '<div class="clear"></div><div class="next">Next</div><div>'+circles+'</div>';
+   var ht = '<div class="clear"></div><button class="next">Next</button><div>'+circles+'</div>';
      
    //main content plus triangle and footer
-f.innerHTML ='<div class="popup">'+ content+triangle+ht; 
+f.innerHTML ='<div class="popup">'+ content+triangle+ht+'</div>'; 
 
      
      //append new div to body
@@ -192,6 +191,10 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
      var lengthKrug = krug.length;
      
      
+
+
+
+
      //click event
        document.getElementsByClassName('next')[0].addEventListener('click', function(){
        //remove popup 
@@ -226,7 +229,7 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
        }else{
          //end popup and scroll to top
          window.scrollTo(0,0);
-       
+       return;
        }
 
     tour(arg, counter);
