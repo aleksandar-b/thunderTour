@@ -19,7 +19,7 @@ Tour(
            side:'right'},
           
            {selector:'.myClass4',
-          content:'This is sample content for popup 3',
+          content:'This is sample content for popup 4',
            side:'right'}
           
          ]
