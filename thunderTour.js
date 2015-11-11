@@ -204,15 +204,17 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
 
        
        
-  /*     var klasForward = arg.steps[counter+1].selector;
+  if(arg.steps[counter+1]){
+    var klasForward = arg.steps[counter+1].selector;
          
-         firstOne =   document.querySelector(klasForward); */
+         firstOne =   document.querySelector(klasForward); 
+       }
       
        
        counter++;
        
        if(counter < length){
-        firstOne = firstOne.nextSibling.nextSibling;
+        //firstOne = firstOne.nextSibling.nextSibling;
          
          absolutePos = firstOne.getBoundingClientRect().top + window.scrollY;
      var  relPos = firstOne.getBoundingClientRect().top;
