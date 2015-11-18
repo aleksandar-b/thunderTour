@@ -33,7 +33,8 @@ var Tour =  (function(){
      
      var defaults = {side:'left',
                     background: 'blue',
-                    marginOffset:30
+                    marginOffset:30,
+
                       
    };
      
@@ -126,6 +127,12 @@ f.innerHTML ='<div class="popup">'+ content+triangle+ht+'</div>';
 var h3 = document.getElementsByTagName('body')[0];
           h3.appendChild(f);
      
+
+     if(counter === length-1){   
+         document.getElementsByClassName('next')[0].innerHTML = 'Got it!';    
+             
+      }
+
      document.getElementsByClassName('krug')[length-1-counter].style.background = '#00334D';
      
      // width of target element
@@ -215,15 +222,21 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
          firstOne =   document.querySelector(klasForward); 
        }
       
+
+
+
+      var rectLast = firstOne.getBoundingClientRect();
+    absolutePos = rectLast.top+ window.scrollY;
+            var  relPos = rectLast.top;
        
        counter++;
        
+
+
+
        if(counter < length){
         //firstOne = firstOne.nextSibling.nextSibling;
-         
-         absolutePos = Rect.top + window.scrollY;
-     var  relPos = Rect.top;
-         
+                  
          if(absolutePos > window.innerHeight){
 
          window.scrollTo(0,absolutePos-window.innerHeight/2);
@@ -254,4 +267,12 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
   
   
  })();
+/*
+TO DO
+add Options
 
+-background
+-back and close button
+-blink opacity
+-easing
+*/

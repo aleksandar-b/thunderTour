@@ -121,6 +121,11 @@ margin-bottom: 6px;
     
   }
 
+  .animationGlow{
+
+  animation: glow 190ms ease-in-out 5;
+}
+
   100% {
     opacity: 1;
     transform: translateX(0px);
@@ -168,4 +173,9 @@ margin-bottom: 6px;
     transform: translateY(0px);
     
   }
+}
+
+
+@keyframes glow {
+  50%  { box-shadow: 0 0 20px #aaf; }
 }
