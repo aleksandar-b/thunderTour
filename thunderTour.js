@@ -77,16 +77,18 @@ var Tour =  (function(){
      
      firstOne(klass);
      
-      var absolutePosBottom = firstOne.getBoundingClientRect().bottom + window.scrollY;
+var Rect = firstOne.getBoundingClientRect();
+
+      var absolutePosBottom = Rect.bottom + window.scrollY;
      
      // top position minus custom offset
-      var absolutePos = firstOne.getBoundingClientRect().top + window.scrollY;
+      var absolutePos = Rect.top + window.scrollY;
      
      // left position
-      var absolutePosX = firstOne.getBoundingClientRect().left + window.scrollX;
+      var absolutePosX = Rect.left + window.scrollX;
    
      // right position
-      var absolutePosR = firstOne.getBoundingClientRect().right + window.scrollX;
+      var absolutePosR = Rect.right + window.scrollX;
      
      var height =absolutePosBottom-absolutePos;
      
@@ -131,14 +133,17 @@ var h3 = document.getElementsByTagName('body')[0];
    
      
      // right position of popup
-      var right = document.getElementsByClassName('popup')[0].getBoundingClientRect().right + window.scrollX;
+var RectPopup = document.getElementsByClassName('popup')[0].getBoundingClientRect();
+
+
+      var right = RectPopup.right + window.scrollX;
    //left position of popup
-   var left = document.getElementsByClassName('popup')[0].getBoundingClientRect().left + window.scrollX;
+   var left =RectPopup.left + window.scrollX;
    
      
-    var top = document.getElementsByClassName('popup')[0].getBoundingClientRect().top + window.scrollY;
+    var top = RectPopup.top + window.scrollY;
    //left position of popup
-   var bottom = document.getElementsByClassName('popup')[0].getBoundingClientRect().bottom + window.scrollY;
+   var bottom = RectPopup.bottom + window.scrollY;
    
         
       var targHeight = bottom-top;
@@ -216,8 +221,8 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
        if(counter < length){
         //firstOne = firstOne.nextSibling.nextSibling;
          
-         absolutePos = firstOne.getBoundingClientRect().top + window.scrollY;
-     var  relPos = firstOne.getBoundingClientRect().top;
+         absolutePos = Rect.top + window.scrollY;
+     var  relPos = Rect.top;
          
          if(absolutePos > window.innerHeight){
 
