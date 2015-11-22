@@ -2,7 +2,12 @@
 
 var Tour =  (function(){
 
+/**
+ * Closure creating function
+ * @return {Function} tour
+ */
     
+
 //private
   
   //Selector query
@@ -21,6 +26,9 @@ var Tour =  (function(){
   
   
    var tour = function (arg,counter){
+
+
+
 
     // default counter 
        counter = counter || 0;
