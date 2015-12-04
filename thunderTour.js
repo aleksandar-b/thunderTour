@@ -275,6 +275,11 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
   
   
  })();
+
+
+if (typeof module != "undefined" && module.exports)
+  module.exports = Tour;
+
 /*
 TO DO
 add Options
