@@ -108,7 +108,7 @@ margin-bottom: 6px;
   padding-bottom:35px !important;
   font-size: 0.85em;
   border-radius: 4px;
-
+  will-change: transform, opacity;
   animation-name: fadeInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
