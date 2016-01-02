@@ -312,10 +312,18 @@ tour(arg, counter);
       return;
                     }else{
 
-                     window.scrollTo(0,absolutePos-window.innerHeight/2);
-                      }
+                   if (hasJquery) {
+					 //document.getElementsByClassName('popup')[0].style.animationDelay = 700;
+                      jQuery('body, html').animate({ scrollTop: 0 }, 400);
+      
+                        }else{
+                       window.scrollTo(0,0);
+                             }
+                         }
              }else{
          
+
+
                window.scrollTo(0,0);
          
          }
@@ -323,9 +331,23 @@ tour(arg, counter);
          }else{
 			 
           //end popup and scroll to top
-           window.scrollTo(0,0);
-           return;
-          
+             
+              if (hasJquery) {
+					 //document.getElementsByClassName('popup')[0].style.animationDelay = 700;
+	                  
+	             jQuery('body, html').animate({ scrollTop: 0 }, 400);
+	                  
+	            document.getElementsByClassName('popup')[0].remove();
+	            document.getElementsByClassName('div')[0].remove();       
+	                  
+	            return;
+	                    }else{
+	            window.scrollTo(0,0);
+	                           document.getElementsByClassName('popup')[0].remove();
+	            document.getElementsByClassName('div')[0].remove();
+	            return;
+                    }
+             
           }
 
           //remove popup 
