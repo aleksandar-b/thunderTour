@@ -172,7 +172,7 @@ var Tour =  (function(){
 
 		}); 
        
-       
+               /*  ============ Create Audio Effect ============ */
        
        var audio = document.createElement('audio');
        audio.className = 'thunderAudio';
@@ -184,6 +184,11 @@ var Tour =  (function(){
        audio.currentTime = 0;
        audio.play(); 
        
+       
+       
+       
+         // Chaining two animation 
+         
        document.querySelector('.svgt svg').style.animationName = 'lightning';
        document.querySelector('.svgt svg').addEventListener('animationend', function(){
        document.querySelector('.svgt svg').style.animationName = 'thunder';
@@ -267,11 +272,7 @@ var Tour =  (function(){
 
         //click event
         document.getElementsByClassName('next')[0].addEventListener('click', function(){
-        //remove popup 
-
-        document.getElementsByClassName('popup')[0].remove();
-        document.getElementsByClassName('div')[0].remove();
-
+        
        
        
         if(arg.steps[counter+1]){
@@ -298,6 +299,7 @@ var Tour =  (function(){
             if(absolutePos > window.innerHeight){
 				
 				 if (hasJquery) {
+					 document.getElementsByClassName('popup')[0].style.animationDelay = 700;
               jQuery('body, html').animate({ scrollTop: absolutePos-window.innerHeight/2 }, 400);
       
                     }else{
@@ -318,9 +320,16 @@ var Tour =  (function(){
           
           }
 
+          //remove popup 
 
-       tour(arg, counter);
-       return;
+          document.getElementsByClassName('popup')[0].remove();
+          document.getElementsByClassName('div')[0].remove();
+
+
+          // start popup for next element 
+          
+           tour(arg, counter);
+           return;
        
        
      }, false); 
