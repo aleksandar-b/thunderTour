@@ -37,6 +37,11 @@ var Tour =  (function(){
 
 
 
+if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassName('div')[0]){
+       document.getElementsByClassName('popup')[0].remove();
+       document.getElementsByClassName('div')[0].remove();
+}
+
 
 		// default counter 
 		   counter = counter || 0;
