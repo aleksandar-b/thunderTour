@@ -305,8 +305,11 @@ if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassNa
 				
 				 if (hasJquery) {
 					 document.getElementsByClassName('popup')[0].style.animationDelay = 700;
-              jQuery('body, html').animate({ scrollTop: absolutePos-window.innerHeight/2 }, 400);
-      
+              jQuery('body, html').animate({ scrollTop: absolutePos-window.innerHeight/2 }, 400, function() {
+
+tour(arg, counter);
+});
+      return;
                     }else{
 
                      window.scrollTo(0,absolutePos-window.innerHeight/2);
