@@ -399,12 +399,4 @@ add Options
 -blink opacity
 -easing
 */
-/*
-TO DO
-add Options
 
--background
--back and close button
--blink opacity
--easing
-*/
