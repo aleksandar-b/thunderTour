@@ -186,7 +186,7 @@ if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassNa
        audio.volume = 0.2;
      
        
-       audio.currentTime = 0;
+       // audio.currentTime = 0;
        audio.play(); 
        
        
