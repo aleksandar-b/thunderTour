@@ -27,61 +27,6 @@ var Tour =  (function(){
             };
    
 
-  //Main returning function 
- //public 
- /* =========================================================================== */
-  
-  
-  
-      var tour = function (arg,counter){
-
-
-
-if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassName('div')[0]){
-       document.getElementsByClassName('popup')[0].remove();
-       document.getElementsByClassName('div')[0].remove();
-}
-
-
-		// default counter 
-		   counter = counter || 0;
-		 var length = arguments[0].steps.length;
-		//reset counter
-		 if(counter ===  arguments[0].steps.length){
-		   
-		   counter = 0;
-		 }
-		 
-		 var defaults = {side:'left',
-						background: 'blue',
-						marginOffset:30,
-
-						  
-var Tour = (function () {
-
-    /**
-     * Closure creating function
-     * @return {Function} tour
-     */
-
-
-    //private
-
-    var hasJquery = (typeof jQuery !== 'undefined');
-
-
-    //Selector query
-    var first = function (val) {
-
-        return val[0];
-
-    };
-
-    var tail = function (val) {
-
-        return val.slice(1);
-
-    };
 
 
     //Main returning function
@@ -99,6 +44,11 @@ var Tour = (function () {
             document.getElementsByClassName('div')[0].remove();
         }
 
+
+         if (document.getElementsByClassName('thunderAudio')[0]) {
+            document.getElementsByClassName('thunderAudio')[0].remove();
+
+        }
 
         // default counter
         counter = counter || 0;
@@ -440,6 +390,15 @@ var Tour = (function () {
 if (typeof module != "undefined" && module.exports)
     module.exports = Tour;
 
+/*
+TO DO
+add Options
+
+-background
+-back and close button
+-blink opacity
+-easing
+*/
 /*
 TO DO
 add Options
