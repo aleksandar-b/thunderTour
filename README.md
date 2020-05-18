@@ -1,6 +1,6 @@
 # thunderTour
 
-Demo: https://samosale.github.io/thunderTour.github.io/
+Demo: https://aleksandar-b.github.io/thunderTour.github.io/
 
 Example:
 
